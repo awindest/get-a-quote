@@ -1,5 +1,7 @@
 # Get a Quote
 <img width="1376" height="702" alt="get-a-quote" src="https://github.com/user-attachments/assets/470a1c0d-e064-45a3-8177-45e8712ac44a" />
+<img width="547" height="296" alt="get-a-quote-small" src="https://github.com/user-attachments/assets/9da0aa47-ba8d-438f-9937-cb94b4cd459a" />
+
 
 This little snippet of code grabs random quotes from Luke Peavey's excellent https://api.quotable.io/random endpoint.
 
