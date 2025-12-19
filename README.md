@@ -1,1 +1,11 @@
-# Pushy Pushy button with great skeuomorphic styled buttons, which means they emulate real life buttons.
+# Get a Quote
+
+This little snippet of code grabs random quotes from Luke Peavey's excellent https://api.quotable.io/random endpoint.
+
+Unfortunately as of December 2025, the SSL Certificate for this site has expired and modern web browsers won't connect and you get a NET::ERR_CERT_AUTHORITY_INVALID error. 
+
+You could download this code and
+`pnmp i`
+`pnpm run dev `
+
+This will run it locally and you can enjoy some nice quotes.

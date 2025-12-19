@@ -5,8 +5,15 @@
 
 	let data = null
 	const getQuote = async () => {
-		const response = await fetch('https://api.quotable.io/random')
-		data = await response.json()
+		try {
+			const response = await fetch('https://api.quotable.io/random')
+			if (!response.ok) {
+				throw new Error(`Response status: ${response.status}`)
+			}
+			data = await response.json()
+		} catch (error) {
+			console.error(' Error in getQuote: ', error.message)
+		}
 	}
 	onMount(async () => {
 		// const response = await fetch('http://api.quotable.io/random')
