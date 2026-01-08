@@ -6,7 +6,9 @@
 	let data = null
 	const getQuote = async () => {
 		try {
-			const response = await fetch('http://api.quotable.io/random')
+			// For internal assets or third-party resources that you know support HTTPS,
+			// you can use protocol-relative URLs by omitting the http: or https: part (e.g., //example.com/resource.js). This way, the browser automatically uses the same protocol as the host page.
+			const response = await fetch('//api.quotable.io/random')
 			if (!response.ok) {
 				throw new Error(`Response status: ${response.status}`)
 			}
