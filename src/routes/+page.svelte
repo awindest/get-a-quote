@@ -6,9 +6,7 @@
 	let data = null
 	const getQuote = async () => {
 		try {
-			// For internal assets or third-party resources that you know support HTTPS,
-			// you can use protocol-relative URLs by omitting the http: or https: part (e.g., //example.com/resource.js). This way, the browser automatically uses the same protocol as the host page.
-			const response = await fetch('//api.quotable.io/random')
+			const response = await fetch('/api') // Relative URL calls the internal endpoint
 			if (!response.ok) {
 				throw new Error(`Response status: ${response.status}`)
 			}
@@ -17,10 +15,8 @@
 			console.error(' Error in getQuote: ', error.message)
 		}
 	}
-	onMount(async () => {
-		// const response = await fetch('http://api.quotable.io/random')
-		// quote = await response.json()
-		getQuote()
+	onMount(() => {
+		getQuote() // initial quote
 	})
 	async function handleButtonClick() {
 		data = await getQuote() // Invokes the server function via fetch
