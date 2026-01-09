@@ -3,7 +3,7 @@
 	import { onMount } from 'svelte'
 	import { fade } from 'svelte/transition'
 
-	let data = null
+	let data
 	const getQuote = async () => {
 		try {
 			const response = await fetch('/api') // Relative URL calls the internal endpoint
